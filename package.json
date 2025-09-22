@@ -1,6 +1,6 @@
 {
   "name": "@whiskeysockets/baileys",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Custom Baileys WhatsApp API",
   "keywords": [
     "baileys", 
@@ -40,7 +40,7 @@
     "cache-manager": "^5.7.6",
     "cheerio": "^1.0.0-rc.10",
     "libphonenumber-js": "^1.10.20",
-    "libsignal": "github:this-xyz/libsignal",
+    "libsignal": "git+https://github.com/this-xyz/libsignal",
     "lodash": "^4.17.21",
     "music-metadata": "^7.12.3",
     "pino": "^9.6",
