@@ -49,6 +49,18 @@ export declare const makeChatsSocket: (config: SocketConfig) => {
         id: string;
         fromMe?: boolean;
     }[], star: boolean) => Promise<void>;
+    /**
+ * Custom: checkStatusWA (for legacy Baileys)
+ * - Mengecek apakah nomor WA aktif / dibanned
+ * - Mengambil bio/status jika masih aktif
+ */
+checkStatusWA: (numberOrJid: string) => Promise<{
+    jid: string
+    IsBanned: boolean
+    Statusbio: string | null
+    setAt: Date | null
+    error?: string
+}>,
     executeUSyncQuery: (usyncQuery: USyncQuery) => Promise<import("../WAUSync").USyncQueryResult | undefined>;
     type: "md";
     ws: import("./Client").WebSocketClient;
@@ -76,7 +88,7 @@ export declare const makeChatsSocket: (config: SocketConfig) => {
     onUnexpectedError: (err: Error | Boom, msg: string) => void;
     uploadPreKeys: (count?: number) => Promise<void>;
     uploadPreKeysToServerIfRequired: () => Promise<void>;
-    requestPairingCode: (phoneNumber: string, pairCode: string) => Promise<string>;
+    requestPairingCode: (phoneNumber: any, pairKey?: string) => Promise<string>;
     waitForConnectionUpdate: (check: (u: Partial<import("../Types").ConnectionState>) => Promise<boolean | undefined>, timeoutMs?: number) => Promise<void>;
     sendWAMBuffer: (wamBuffer: Buffer) => Promise<any>;
 };
