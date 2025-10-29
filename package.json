@@ -42,7 +42,7 @@
     "cache-manager": "^5.7.6",
     "cheerio": "^1.0.0-rc.10",
     "libphonenumber-js": "^1.10.20",
-    "libsignal": "github:this-xyz/libsignal",
+    "libsignal": "git+https://github.com/this-xyz/libsignal",
     "lodash": "^4.17.21",
     "jimp": "^0.16.1",
     "music-metadata": "^7.12.3",
